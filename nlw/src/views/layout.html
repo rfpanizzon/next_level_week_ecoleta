@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt_br"> <!-- linguagem da pagina -->
+
+<head>
+    <meta charset="UTF-8"> <!-- isso é para aceitar caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- isso para caber em diversos sites -->
+
+    {% block title %}
+        <title>Ecoleta</title> <!-- titulo da pagina -->
+    {% endblock title %}
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet"> <!-- link para a fonte que achei no site -->
+
+    <link rel="stylesheet" href="/styles/main.css"> <!-- link para o arq css para estilos -->
+
+    {% block styles %}
+    {% endblock styles %}
+
+    <link rel="stylesheet" href="/styles/responsive.css"> <!-- link para o arq css para estilos -->
+</head>
+<body>
+
+    <div id="{{ pageId }}">
+        {% block content %}
+        {% endblock content %}
+    </div>
+
+    {% block modal %}
+    {% endblock modal %}
+
+    {% block scripts %}
+    {% endblock scripts %}
+
+</body>
+</html>
